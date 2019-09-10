@@ -21,6 +21,7 @@
     </thead>
     
     <?php foreach ($produto as $produto): ?>
+    
     <tr>
         <td><?=$produto['codigo']?></td>
         <td><?=$produto['categoria']?></td>
@@ -33,6 +34,8 @@
         <td><a href="./produto/deletar/<?=$produto['codigo']?>">Deletar</a></td>
         <td><a href="./produto/editar/<?=$produto['codigo']?>">Editar</a></td>
         <td><a href="./produto/comprar/<?=$produto['codigo']?>">Comprar</a></td>
+        
+        
         
         
     </tr>

@@ -3,6 +3,7 @@
 <?php
 require_once 'modelo/produtoModelo.php';
 require_once 'modelo/categoriaModelo.php';
+
 function visualizar(){
     $vetor = array();
     $vetor ["nome"] = "Texana Masculina";
@@ -118,5 +119,19 @@ function editar($codigo){
        
     }   
 }
+function comprar($codigo){
+   
+    if(isset($_SESSION["carrinho"])) {
+    $produtos = $_SESSION["carrinho"]; 
+    } else {
+        $produtos = array();
+    }
+
+    $produtos[] = $codigo;
+    $_SESSION["carrinho"] = $produtos;
+
+   redirecionar("sacola/mostrar"); 
+}
+
 ?>
   

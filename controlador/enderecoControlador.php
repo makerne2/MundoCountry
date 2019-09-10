@@ -81,8 +81,7 @@ function listarEnderecos() {
 
 function ver($idendereco) {
     
-    $dados["endereco"] = pegarEnderecosPorId($idendereco);
-    
+    $dados["endereco"] = pegarEnderecoPorId($idendereco);
     exibir("endereco/visualizar", $dados);
    
 }
